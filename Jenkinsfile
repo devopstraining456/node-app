@@ -6,7 +6,7 @@ pipeline {
     stages{
         stage('Build Docker Image'){
             steps{
-                sh "docker build . -t kubernetes8/nodeapp:${DOCKER_TAG}"
+                sh "docker build -t kubernetes8/nodeapp . "
             }
 }
             stage('DockerHub Push'){
