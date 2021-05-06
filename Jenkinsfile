@@ -6,7 +6,7 @@ pipeline {
     stages{
         stage('Build Docker Image'){
             steps{
-                sh "docker build . -t ${IMAGE_URL_WITH_TAG}"
+                sh "docker build . -t kubernetes8/nodeapp:${DOCKER_TAG}"
             }
   }
 def getDockerTag(){
